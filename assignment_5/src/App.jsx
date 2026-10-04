@@ -19,46 +19,64 @@ function App() {
 
                 <div className="form-header">
                     <div className="icon">📝</div>
+
                     <h1>Student Registration</h1>
+
                     <p>Enter your details to register</p>
                 </div>
 
                 <form onSubmit={handleSubmit}>
 
                     <div className="input-group">
-                        <label>Full Name</label>
+                        <label htmlFor="name">Full Name</label>
 
                         <input
+                            id="name"
                             type="text"
                             value={name}
-                            onChange={(event) => setName(event.target.value)}
+                            onChange={(event) =>
+                                setName(event.target.value)
+                            }
                             placeholder="Enter your full name"
                         />
                     </div>
 
                     <div className="input-group">
-                        <label>Email Address</label>
+                        <label htmlFor="email">Email Address</label>
 
                         <input
+                            id="email"
                             type="email"
                             value={email}
-                            onChange={(event) => setEmail(event.target.value)}
+                            onChange={(event) =>
+                                setEmail(event.target.value)
+                            }
                             placeholder="Enter your email"
                         />
                     </div>
 
                     <div className="input-group">
-                        <label>Course</label>
+                        <label htmlFor="course">Course</label>
 
                         <select
+                            id="course"
                             value={course}
-                            onChange={(event) => setCourse(event.target.value)}
+                            onChange={(event) =>
+                                setCourse(event.target.value)
+                            }
                         >
-                            <option value="">Select your course</option>
-                            <option value="MCA">MCA</option>
+                            <option value="">
+                                Select your course
+                            </option>
+
+                            <option value="MCA">
+                                MCA
+                            </option>
+
                             <option value="MSc Computer Science">
                                 MSc Computer Science
                             </option>
+
                             <option value="MSc Data Science">
                                 MSc Data Science
                             </option>
