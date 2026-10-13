@@ -121,7 +121,7 @@ h1 {
 
     gap: 15px;
 
-    background: #f7f8fc;
+    background: #1397bc;
 
     border: 1px solid #e5e7eb;
 
@@ -191,33 +191,76 @@ h1 {
 
     transform: scale(1.05);
 }
+/* Done button */
+
+.done-button {
+    background: #28a745;
+    color: white;
+
+    border: none;
+    padding: 8px 14px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    white-space: nowrap;
+
+    transition: 0.3s;
+}
+
+.done-button:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+/* Keep task buttons aligned */
+
+#taskList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.task-text {
+    flex: 1;
+    min-width: 0;
+    color: #ffffff;
+    font-size: 16px;
+    cursor: pointer;
+    word-break: break-word;
+}
+
+/* Completed task */
+
+.completed {
+    text-decoration: line-through;
+    color: #e0e0e0;
+    opacity: 0.7;
+}
 
 /* Mobile responsive */
 
 @media (max-width: 600px) {
 
-    .todo-container {
-        padding: 25px 20px;
-    }
-
-    h1 {
-        font-size: 27px;
-    }
-
-    .input-section {
-        flex-direction: column;
-    }
-
-    .input-section button {
-        width: 100%;
-    }
-
     #taskList li {
-        padding: 12px;
+        gap: 6px;
+        padding: 10px;
+    }
+
+    .done-button,
+    .delete-button {
+        padding: 8px 9px;
+        font-size: 12px;
     }
 
     .task-text {
-        font-size: 15px;
+        font-size: 14px;
     }
 
 }
+
